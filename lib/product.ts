@@ -1,6 +1,7 @@
 import { Product } from "@/types/product"
 
-const BASE_URL = "https://fakestoreapi.com"
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL!
+
 
 export async function fetchProducts(): Promise<Product[]> {
   const res = await fetch(`${BASE_URL}/products`, {
